@@ -7,7 +7,8 @@ export default defineNuxtConfig({
         autoImports: ['defineStore', 'acceptHMRUpdate', 'storeToRefs']
       }
     ],
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/storybook'
   ],
   components: [
     {
@@ -29,5 +30,5 @@ export default defineNuxtConfig({
   ],
   imports: {
     dirs: ['composables', 'composables/*/index.{ts,js,mjs,mts}', 'composables/**', 'constants']
-  },
+  }
 })
