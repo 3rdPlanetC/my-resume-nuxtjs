@@ -7,7 +7,8 @@
 				primary: primary && !secondary && !brand && !disabled,
 				secondary: secondary && !brand && !disabled,
 				brand: brand && !disabled,
-				disabled
+				disabled,
+				rounded
 			},
 			variant ? 'variant' : 'no-variant',
 			size
@@ -28,7 +29,8 @@ defineProps({
 	disabled: { type: Boolean, default: false },
 	size: { type: String as () => 'small' | 'medium' | 'large', default: 'medium' },
 	appendIcon: { type: String, default: '' },
-	prependIcon: { type: String, default: '' }
+	prependIcon: { type: String, default: '' },
+	rounded: { type: Boolean, default: false }
 })
 // emits
 const emit = defineEmits<(e: 'click') => void>()
@@ -110,18 +112,39 @@ const emit = defineEmits<(e: 'click') => void>()
 		&.variant {
 			@apply px-[10px] py-[2px];
 		}
+		&.rounded {
+			@apply px-4 py-1;
+			&.variant {
+				@apply px-[14px] py-[2px];
+			}
+		}
 	}
 	&.medium {
 		@apply px-4 py-2;
 		&.variant {
 			@apply px-[14px] py-[6px];
 		}
+		&.rounded {
+			@apply px-5 py-2;
+			&.variant {
+				@apply px-[18px] py-[6px];
+			}
+		}
 	}
 	&.large {
 		@apply px-6 py-3;
 		&.variant {
-			@apply px-[20px] py-[10px];
+			@apply px-[22px] py-[10px];
 		}
+		&.rounded {
+			@apply px-7 py-3;
+			&.variant {
+				@apply px-[26px] py-[10px];
+			}
+		}
+	}
+	&.rounded {
+		@apply rounded-[200px];
 	}
 }
 .icon-append {

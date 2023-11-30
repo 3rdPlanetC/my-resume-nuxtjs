@@ -63,13 +63,22 @@ const meta = {
 				type: { summary: ['string'] },
 			}
 		},
+		rounded: {
+			control: { type: 'boolean' },
+			description: 'rounded prop',
+			table: {
+				defaultValue: { summary: false },
+				type: { summary: ['boolean'] },
+			}
+		}
 	},
 	args: {
 		primary: true,
 		secondary: false,
 		brand: false,
 		variant: false,
-		size: 'medium'
+		size: 'medium',
+		rounded: false
 	}
 } satisfies Meta<typeof Button>
 
