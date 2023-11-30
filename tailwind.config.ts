@@ -23,8 +23,8 @@ export default {
 				serif: ['IBM Plex Sans Thai'],
 				mono: ['IBM Plex Sans Thai'],
 				sans: ['IBM Plex Sans Thai'],
-				body: ['IBM Plex Sans Thai'],
-			},
+				body: ['IBM Plex Sans Thai']
+			}
 		}
 	},
 	plugins: []

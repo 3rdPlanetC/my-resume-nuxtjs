@@ -11,7 +11,7 @@ const meta = {
 			description: 'primary prop',
 			table: {
 				defaultValue: { summary: true },
-				type: { summary: ['boolean'] },
+				type: { summary: ['boolean'] }
 			}
 		},
 		secondary: {
@@ -19,7 +19,7 @@ const meta = {
 			description: 'secondary prop',
 			table: {
 				defaultValue: { summary: false },
-				type: { summary: ['boolean'] },
+				type: { summary: ['boolean'] }
 			}
 		},
 		brand: {
@@ -27,7 +27,7 @@ const meta = {
 			description: 'brand prop',
 			table: {
 				defaultValue: { summary: false },
-				type: { summary: ['boolean'] },
+				type: { summary: ['boolean'] }
 			}
 		},
 		variant: {
@@ -35,7 +35,7 @@ const meta = {
 			description: 'variant prop',
 			table: {
 				defaultValue: { summary: false },
-				type: { summary: ['boolean'] },
+				type: { summary: ['boolean'] }
 			}
 		},
 		size: {
@@ -44,7 +44,7 @@ const meta = {
 			options: ['small', 'medium', 'large'],
 			table: {
 				defaultValue: { summary: 'medium' },
-				type: { summary: ['string'] },
+				type: { summary: ['string'] }
 			}
 		},
 		appendIcon: {
@@ -52,7 +52,7 @@ const meta = {
 			description: 'append icon prop',
 			table: {
 				defaultValue: { summary: '' },
-				type: { summary: ['string'] },
+				type: { summary: ['string'] }
 			}
 		},
 		prependIcon: {
@@ -60,7 +60,7 @@ const meta = {
 			description: 'prepend icon prop',
 			table: {
 				defaultValue: { summary: '' },
-				type: { summary: ['string'] },
+				type: { summary: ['string'] }
 			}
 		},
 		rounded: {
@@ -68,7 +68,7 @@ const meta = {
 			description: 'rounded prop',
 			table: {
 				defaultValue: { summary: false },
-				type: { summary: ['boolean'] },
+				type: { summary: ['boolean'] }
 			}
 		}
 	},
@@ -83,12 +83,12 @@ const meta = {
 } satisfies Meta<typeof Button>
 
 export default meta
-interface StoryBookButton extends StoryObj<typeof meta> { }
+interface StoryBookButton extends StoryObj<typeof meta> {}
 
 // primary button
 export const PrimaryButton: StoryBookButton = {
 	args: {
-		primary: true,
+		primary: true
 	}
 }
 

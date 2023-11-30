@@ -58,14 +58,12 @@ export default defineNuxtConfig({
 			]
 		}
 	},
-	runtimeConfig: {
-
-	},
+	runtimeConfig: {},
 	googleFonts: {
 		download: true,
 		families: {
 			'IBM+Plex+Sans+Thai': [100, 200, 300, 400, 500, 600, 700],
-			Prompt: true,
-		},
-	},
+			Prompt: true
+		}
+	}
 })
