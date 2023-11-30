@@ -11,6 +11,22 @@ export default defineNuxtConfig({
 		'@nuxtjs/storybook',
 		'@nuxtjs/google-fonts'
 	],
+	vite: {
+		server: {
+			watch: {
+				usePolling: true
+			}
+		},
+		build: {},
+		vue: {
+			template: {
+				// compilerOptions: {
+				// 	isCustomElement: (tag) =>
+				// 		['header-finnomena-new-header', 'header-finnomena-new-footer'].includes(tag)
+				// }
+			}
+		}
+	},
 	components: [
 		{
 			path: '@/components/atoms',
@@ -34,15 +50,16 @@ export default defineNuxtConfig({
 	},
 	app: {
 		head: {
-			link: [
-				// fontawesome free
+			script: [
 				{
-					rel: 'preload',
-					href: 'https://kit.fontawesome.com/cc5d141a38.js',
+					src: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
 					crossorigin: 'anonymous'
 				}
 			]
 		}
+	},
+	runtimeConfig: {
+
 	},
 	googleFonts: {
 		download: true,

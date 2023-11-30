@@ -13,10 +13,9 @@
 			size
 		]"
 	>
-		<i class="fa-solid fa-chevron-left"></i>
-		<i class="fa-solid fa-user"></i>
+		<i v-if="appendIcon" class="fa-solid icon-append" :class="`fa-${appendIcon}`"></i>
 		<slot> Label Button </slot>
-		<i class="fa-solid fa-chevron-right"></i>
+		<i v-if="prependIcon" class="fa-solid icon-prepend" :class="`fa-${prependIcon}`"></i>
 	</button>
 </template>
 <script setup lang="ts">
@@ -28,8 +27,8 @@ defineProps({
 	variant: { type: Boolean, default: false },
 	disabled: { type: Boolean, default: false },
 	size: { type: String as () => 'small' | 'medium' | 'large', default: 'medium' },
-	append: { type: Boolean, default: false },
-	prepend: { type: Boolean, default: false }
+	appendIcon: { type: String, default: '' },
+	prependIcon: { type: String, default: '' }
 })
 // emits
 const emit = defineEmits<(e: 'click') => void>()
@@ -124,5 +123,11 @@ const emit = defineEmits<(e: 'click') => void>()
 			@apply px-[20px] py-[10px];
 		}
 	}
+}
+.icon-append {
+	@apply mr-2;
+}
+.icon-prepend {
+	@apply ml-2;
 }
 </style>

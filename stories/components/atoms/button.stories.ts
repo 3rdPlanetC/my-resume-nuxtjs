@@ -43,8 +43,24 @@ const meta = {
 			description: 'size prop',
 			options: ['small', 'medium', 'large'],
 			table: {
-				defaultValue: { summary: false },
-				type: { summary: ['boolean'] },
+				defaultValue: { summary: 'medium' },
+				type: { summary: ['string'] },
+			}
+		},
+		appendIcon: {
+			control: { type: 'text' },
+			description: 'append icon prop',
+			table: {
+				defaultValue: { summary: '' },
+				type: { summary: ['string'] },
+			}
+		},
+		prependIcon: {
+			control: { type: 'text' },
+			description: 'prepend icon prop',
+			table: {
+				defaultValue: { summary: '' },
+				type: { summary: ['string'] },
 			}
 		},
 	},
