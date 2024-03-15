@@ -1,4 +1,9 @@
 import type { Config } from 'tailwindcss'
+const kebabcase = require('lodash.kebabcase')
+import tokens from './assets/tokens/mapping'
+const colors = Object.fromEntries(Object.values(tokens.colors).map(({ name, value }) => [kebabcase(name), value]))
+
+console.log("colors : ", colors)
 
 export default {
 	content: [],
